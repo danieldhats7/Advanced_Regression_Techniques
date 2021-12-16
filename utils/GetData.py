@@ -7,6 +7,16 @@ class Data:
 
     def __init__(self):
         self.bad_features = ['PoolQC', 'MiscFeature', 'Alley', 'Fence', 'FireplaceQu']
+        self.better_feature = ['LotArea', 'LowQualFinSF', 'OverallQual', 'ExterQual', 'Condition1',
+       'LotShape', 'ExterCond', 'Functional', 'EnclosedPorch', 'GarageYrBlt',
+       'Condition2', 'MSSubClass', 'MasVnrArea', 'YearRemodAdd', 'LandContour',
+       'PoolArea', 'Exterior2nd', 'MSZoning', 'BldgType', 'GarageType',
+       'PavedDrive', 'MasVnrType', 'LotFrontage', 'KitchenQual', 'BsmtQual',
+       'LotConfig', 'GarageArea', 'KitchenAbvGr', 'TotalBsmtSF',
+       'Neighborhood', 'Street', 'ScreenPorch', 'Foundation', 'TotRmsAbvGrd',
+       'SaleCondition', 'Utilities', 'RoofStyle', 'FullBath', 'WoodDeckSF',
+       'RoofMatl', 'HeatingQC', 'SaleType', 'GarageCars', 'OpenPorchSF',
+       'YrSold', 'BsmtHalfBath']
         self.numerical_imputer = SimpleImputer(strategy='constant')
         self.object_imputer = SimpleImputer(strategy='most_frequent')
         self.ordinal = OrdinalEncoder(handle_unknown='error')
