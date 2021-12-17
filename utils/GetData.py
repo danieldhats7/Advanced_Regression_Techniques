@@ -112,6 +112,7 @@ class Data2:
             df[ordinal_cols] = pd.DataFrame(self.ordinal.transform(df[ordinal_cols]), columns=ordinal_cols)  
             df_oh = pd.DataFrame(self.oh_encoder.transform(df[self.oh_cols]).toarray())
 
+        df.drop(self.oh_cols, axis=True, inplace=True)
         df = pd.concat([df,df_oh], join='inner', axis=1)
         df.drop('Id', axis=1, inplace=True)
         
