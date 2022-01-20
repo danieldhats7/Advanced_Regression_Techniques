@@ -38,7 +38,7 @@ def predict():
     try:
         response_ = get_model_response(feature_dict)
     except ValueError as e:
-        return 'malo'
+        return {'error': str(e).split('\n')[-1].strip()}, 500
 
     return response_, 200
 
