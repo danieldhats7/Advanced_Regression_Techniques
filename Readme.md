@@ -26,12 +26,15 @@ With 79 explanatory variables describing (almost) every aspect of residential ho
 Firt we need to create a virtual environment for the project, to keep track of every dependency, it is also useful to use and explicit version of Python
 
 Install the package for creating a virtual environment:
+
 `$ pip install virtualenv`
 
 Create a new virtual environment
+
 `$ virtualenv venv`
 
 Activate virtual environment
+
 `$ source venv/bin/activate`
 
 # Python packages
