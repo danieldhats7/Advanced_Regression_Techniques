@@ -3,33 +3,23 @@
 From Data Science to MLOPs workshop
 
 # Dataset
-## Breast Cancer Wisconsin (Diagnostic) Data Set
+## Boston Housing (Predict Prices) Data Set
 
 For this workshop we are going to work with the following dataset:
 
-https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
+https://kaggle.com/c/house-prices-advanced-regression-techniques/overview (Predict Prices)
 
-Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
-n the 3-dimensional space is that described in: [K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34].
+Ask a home buyer to describe their dream house, and they probably won't begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition's dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence. \
 
-### Attribute Information:
+With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
 
-1) ID number
-2) Diagnosis (M = malignant, B = benign)
-3-32)
+### Skills Seveloped:
 
-Ten real-valued features are computed for each cell nucleus:
-
-a) radius (mean of distances from center to points on the perimeter)
-b) texture (standard deviation of gray-scale values)
-c) perimeter
-d) area
-e) smoothness (local variation in radius lengths)
-f) compactness (perimeter^2 / area - 1.0)
-g) concavity (severity of concave portions of the contour)
-h) concave points (number of concave portions of the contour)
-i) symmetry
-j) fractal dimension ("coastline approximation" - 1)
+1) EDA
+2) Feature Engineering
+3) Modeling
+4) Pipelines
+5) Deployment with Flask
 
 # Virtual Environment
 
@@ -60,17 +50,7 @@ After we have install all the dependencies we can now run the script in code/tra
 
 Finally we can test our web application by running:
 
-`$ flask run -p 5000`
-
-# Docker
-
-Now that we have our web application running, we can use the Dockerfile to create an image for running our web application inside a container
-
-`$ docker build . -t from_ds_to_mlops`
-
-And now we can test our application using Docker
-
-`$ docker run -p 8000:8000 from_ds_to_mlops`
+`$ python app.py`
 
 # Test!
 
