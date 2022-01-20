@@ -32,16 +32,16 @@ def predict():
     feature_dict = request.get_json()
     if not feature_dict:
         return {
-                   'error': 'Body is empty.'
-               }, 500
+            'error': 'Body is empty.'
+            }, 500
 
     try:
         response_ = get_model_response(feature_dict)
     except ValueError as e:
-        return {'error': str(e).split('\n')[-1].strip()}, 500
+        return 'malo'
 
     return response_, 200
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)

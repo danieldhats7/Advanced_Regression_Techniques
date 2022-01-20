@@ -169,7 +169,7 @@ class DataPrep:
                                         Electrical, KitchenQual, Functional, FireplaceQu, GarageType, GarageFinish,
                                         GarageQual, GarageCond, PavedDrive, PoolQC, Fence]
 
-        self.col_fill_NA = ['Alley', 'MasVnrType', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1',
+        self.col_fill_NA = ['Alley', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1',
                             'BsmtFinType2', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond',
                             'PoolQC', 'Fence', 'MiscFeature']
         self.col_fill_0 = ['LotFrontage', 'MasVnrArea', 'BsmtFullBath', 'BsmtHalfBath', 'BsmtFinSF2', 'GarageArea',
