@@ -5,7 +5,7 @@ from urllib import response
 # Third part imports
 from flask import request
 
-from microservices import app
+from microservices import application
 from microservices.functions import get_model_response
 
 model_name = 'House Price Prediction'
@@ -13,7 +13,7 @@ model_file = 'model_binary.dat.gz'
 version = 'v1.0.0'
 
 
-@app.route('/info', methods=['GET'])
+@application.route('/info', methods=['GET'])
 def info():
     """ Return model information, version, how to call """
     result = {'name': model_name, 'version': version}
@@ -21,13 +21,13 @@ def info():
     return result
 
 
-@app.route('/health', methods=['GET'])
+@application.route('/health', methods=['GET'])
 def health():
     """Return service health"""
     return 'ok'
 
 
-@app.route('/predict', methods=['POST'])
+@application.route('/predict', methods=['POST'])
 def predict():
     feature_dict = request.get_json()
     if not feature_dict:
@@ -44,4 +44,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    application.run(host='0.0.0.0', port=5000, debug=False)
