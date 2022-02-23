@@ -15,5 +15,4 @@ RUN pip install -r requirements.txt
 
 # Run the application
 EXPOSE 8000
-ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:8000", "--access-logfile", "-", "--error-logfile", "-", "--timeout", "120"]
-CMD ["application:application"]
+ENTRYPOINT FLASK_APP=/application/application.py flask run --host=0.0.0.0
