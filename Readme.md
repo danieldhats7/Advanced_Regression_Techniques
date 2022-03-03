@@ -55,6 +55,16 @@ Finally we can test our web application by running:
 
 `$ python app.py`
 
+# Docker
+
+Now that we have our web application running, we can use the Dockerfile to create an image for running our web application inside a container
+
+`$ docker build . -t from_ds_to_mlops`
+
+And now we can test our application using Docker
+
+`$ docker run -p 8000:8000 from_ds_to_mlops`
+
 # Test!
 
 Test by using the calls in tests/example_calls.txt from the terminal
